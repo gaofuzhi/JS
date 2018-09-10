@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>		
+	</head>
+	<script type="text/javascript">
+		function showAd(){
+			var id = window.setInterval("hideAd()",3000);
+			var adD = document.getElementById("adDiv");
+			adD.style.display = "block";
+		}
+		function hideAd(){			
+			var adD = document.getElementById("adDiv");
+			adD.style.display = "none";
+			//window.clearInterval(id);//此代码之后的代码不会被执行
+			var id2 = window.setInterval("showAd()",3000);
+			//window.clearInterval(id2);//showAd()不会被执行			
+		}
+	</script>		
+	<body onload="showAd()">
+		<p>
+		技术分析：
+		window对象的定时、清除定时的方法以及css中的display属性的两个值(block：显示元素；none：隐藏元素)
+		</p>
+		<div id= "adDiv" style="display: none;">
+			<img src="img/1.jpg" />
+		</div>
+	</body>
+</html>
