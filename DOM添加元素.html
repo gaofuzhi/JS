@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function addElements(){
+				//var tag = document.getElementById("ulID");
+				var tag = document.getElementById("ulID");			
+				var liEl=document.createElement("li");
+				var artical = document.createTextNode("深圳");
+				liEl.appendChild(artical);
+				tag.appendChild(liEl);				
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ulID">
+			<li>
+				上海
+			</li>
+			<li>
+				北京
+			</li>
+		</ul>
+		<input type="button" value="添加元素" onclick="addElements()"/>
+	</body>
+</html>
